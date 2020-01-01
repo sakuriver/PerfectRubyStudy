@@ -125,7 +125,7 @@ if family_talk_flg
 
     ]
 
-    for family_talk_message in family_talk_message_list
+     family_talk_message in family_talk_message_list
         talk_scene.message_show(family_talk_message.display_name, family_talk_message.message_body)
     end
         
