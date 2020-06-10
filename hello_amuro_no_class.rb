@@ -1,1 +1,3 @@
-puts "Hello, Amuro!"
+# frozen_string_literal: true
+
+puts 'Hello, Amuro!'

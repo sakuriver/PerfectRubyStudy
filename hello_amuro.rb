@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class StartGundam
   def say
-    puts "hello, Amuro!"
+    puts 'hello, Amuro!'
   end
 end
 
