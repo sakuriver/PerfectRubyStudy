@@ -1,11 +1,13 @@
 
 def weapon_slot_message(pilot_name, option_weapon_name = "")
-	puts "unit_name #{unit_name} "
-	puts "weapon "
+  puts "pilot_name #{pilot_name} "
+  puts "default weapon sword"
+  puts "beam none world "
+  puts "option weapon #{option_weapon_name}"
+  puts ""
 end
 
-pilot_name = ""
-option_weapon_name = ""
-# 省略可能引数→オプションセット→鉄血のオルフェンズ
+pilot_name = "Mikazuki　Augus"
+option_weapon_name = "Lance"
 weapon_slot_message(pilot_name)
 weapon_slot_message(pilot_name, option_weapon_name)
