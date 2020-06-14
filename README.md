@@ -11,3 +11,14 @@ PerfectRubyを読みながら、カスタマイズしたプログラムを作っ
 第２章 Second
 
 第３章 Third
+
+Chapters 1 - 3 Gundam.
+
+Connecting Chapters and Folders
+
+Chapter 1 First
+
+Chapter 2 Second
+
+Chapter 3: Third
+
