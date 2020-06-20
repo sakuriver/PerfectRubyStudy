@@ -12,6 +12,11 @@ module Display
       print "\e[#{@color_maps[color_code]}"
       puts body
       print "\e[0m"
-	  end
+    end
+    
+    def self.message_clear
+      puts "\e[H\e[2J"
+    end
+
   end
 end
