@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class JobBase
   @name
   @hp
@@ -12,7 +14,7 @@ class JobBase
     @defense = defense
     @speed = speed
   end
-	
+
   def profile
     puts "name #{@name}"
     puts "hp #{@hp}"
@@ -25,24 +27,24 @@ end
 
 class Soldier < JobBase
   def skill
-    @power = @power * 2
-    puts "バイキルトを発動しました"
+    @power *= 2
+    puts 'バイキルトを発動しました'
   end
 end
 
 class Wizard < JobBase
   def skill
     @now_hp += 10
-    puts "ヒールを発動しました"
+    puts 'ヒールを発動しました'
   end
 end
 
-job = JobBase.new("john", 200, 200, 30, 45, 50)
+job = JobBase.new('john', 200, 200, 30, 45, 50)
 job.profile
 
-solider = Soldier.new("sakuriver", 250, 250, 40, 58, 50)
+solider = Soldier.new('sakuriver', 250, 250, 40, 58, 50)
 solider.profile
-wizard = Wizard.new("chomado", 160, 150, 46, 32, 80)
+wizard = Wizard.new('chomado', 160, 150, 46, 32, 80)
 wizard.profile
 
 solider.skill
@@ -50,3 +52,5 @@ solider.profile
 
 wizard.skill
 wizard.profile
+
+# issue to be continued.... party mode or battle mode

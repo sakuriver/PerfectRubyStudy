@@ -27,8 +27,9 @@ puts "character information party member"
 party.each do |unit|
 	puts "attack #{unit.attack} defense #{unit.defense}"
 end
-
+# issue to be continued....
 puts "select mode"
-
+# issue to be continued....
 puts "quest mode"
+# issue to be continued....
 puts "battle mode"
