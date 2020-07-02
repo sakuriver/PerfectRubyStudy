@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 CharAznableMessage = 'Because he s a little boy.'
 p CharAznableMessage.class
 p String.ancestors
 
 RestartScenarioNumber = 10
 p RestartScenarioNumber.class
-p Fixnum.ancestors
+p Integer.ancestors
 
 Lalah = true
 RambaLal = false
