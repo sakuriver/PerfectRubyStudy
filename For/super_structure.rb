@@ -70,6 +70,8 @@ module Scene
 			Display::GameMessage.message_clear
 			party_num.to_i
 		end
+		def unit_select
+		end
 	end
 
 	class Main

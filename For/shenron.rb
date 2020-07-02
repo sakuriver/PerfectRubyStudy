@@ -5,8 +5,8 @@ require '../Utility/game_message'
 class ShenronBase
   SUMMON_COST = 7
   @summoned
-	@cool_time_day
-	attr_accessor :display_name
+    @cool_time_day
+    attr_accessor :display_name
   def initialize
     @summoned = false
     @cool_time_day = 0
@@ -39,15 +39,10 @@ shenron.summon!
 sleep(5)
 Display::GameMessage.output(:white, "shenron summoned #{shenron.summoned?}")
 
+Display::GameMessage.output(:white, '')
+Display::GameMessage.output(:white, '')
 
-Display::GameMessage.output(:white, "")
-Display::GameMessage.output(:white, "")
-
-shenron.display_name = "神龍"
+shenron.display_name = '神龍'
 Display::GameMessage.output(:white, "shenron name is #{shenron.display_name}")
 shenron.display_name = "ポルンガ"
 Display::GameMessage.output(:white, "shenron name is #{shenron.display_name}")
-
-
-
-
