@@ -1,80 +1,17 @@
 # frozen_string_literal: true
 
 require '../Utility/game_message'
+require './scenario_character'
+require './scenario_standard'
 
-
-
-class Buu 
-  OKASHI_ID = 1
-  @display_name
-  def initialize(display_name)
-    @display_name = display_name
-  end
-  def magic(skill_id, base_cake)
-    if skill_id == 1
-      return base_cake.ceil
-    end
-    base_cake
-  end
-  def display_name
-    @display_name
-  end
-end
-
-class Hercule
-  @display_name
-  def initialize(display_name)
-    @display_name = display_name
-  end
-  def display_name
-    @display_name
-  end
-end
-
-
-module Game
-  class Title
-    def start
-      Display::GameMessage.output(:white, "ブウとサタンのほのぼの日記")
-      Display::GameMessage.output(:white, "-------------------------")
-      Display::GameMessage.output(:white, "(*'ω'*)始まるよー")
-      Display::GameMessage.output(:white, "")
-      Display::GameMessage.output(:white, "-------------------------")
-      Display::GameMessage.output(:white, "パーフェクトRuby 星に願いを編")
-      Display::GameMessage.title_footer_message
-      Display::GameMessage.wait_and_message_clear
-    end
-  end
-
-  class Talk
-    def message_show(display_name, display_message)
-      Display::GameMessage.output(:white, "-                              -")
-      Display::GameMessage.output(:white, "-                              -")
-      Display::GameMessage.output(:white, "-                              -")
-      Display::GameMessage.output(:white, "-                              -")
-      Display::GameMessage.output(:white, "-                              -")
-      Display::GameMessage.output(:white, "--------------------------------")
-      Display::GameMessage.output(:white, "-                              -")
-      Display::GameMessage.output(:white, "- #{display_name}「#{display_message}」-")
-      Display::GameMessage.output(:white, "-                             -")
-      Display::GameMessage.output(:white, "--------------------------------")
-      Display::GameMessage.wait_and_message_clear
-    end
-  end
-end
-
-title_scene = Game::Title.new
+title_scene = GameStandard::Title.new("ブウとサタンのほのぼの日記", "(*'ω'*)始まるよー")
 
 title_scene.start
 
-
-talk_scene = Game::Talk.new
+talk_scene = GameStandard::Talk.new
 
 hercule = Hercule.new("サタン")
-
 buu = Buu.new("ブウ")
-
-
 
 talk_scene.message_show(buu.display_name, "#{hercule.display_name}、ただいまー")
 talk_scene.message_show(hercule.display_name, "#{buu.display_name}さん、おかえりなさい")
