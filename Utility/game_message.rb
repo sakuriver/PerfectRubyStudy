@@ -18,5 +18,20 @@ module Display
       puts "\e[H\e[2J"
     end
 
+    def self.wait_and_message_clear
+      wait = gets.chomp
+      sleep(1)
+      Display::GameMessage.message_clear
+    end
+
+    def self.title_footer_message
+			Display::GameMessage.output(:white, "press push key")
+			Display::GameMessage.output(:white, "----------------------------------")
+			Display::GameMessage.output(:white, "- sakuriver develop center       -")
+			Display::GameMessage.output(:white, "-                                -")
+			Display::GameMessage.output(:white, "----------------------------------")
+    end
+
+
   end
 end

@@ -178,19 +178,19 @@ module Battle
 		@six_member
 		@seven_member
 		def initialize(six_space_members, seven_party_members)
-      @six_space_members = six_space_members
-      @seven_space_members = seven_party_members
-      @round_num = 1
-      @six_member_num = 0
+            @six_space_members = six_space_members
+            @seven_space_members = seven_party_members
+            @round_num = 1
+             @six_member_num = 0
 			@seven_member_num = 0
 			@round_result_messages = []
 		end
 		def battle_exec
-      battle_start
+            battle_start
 			loop {
-        round_exec
+                round_exec
 				if is_battle_end?
-          break
+                    break
 				end
 			}
 			battle_end
@@ -208,7 +208,7 @@ module Battle
 
 			@six_member = @six_space_members.get_member(@six_member_num)
 			@seven_member = @seven_space_members.get_member(@seven_member_num)
-      round_start
+            round_start
 			loop {
 				command_exec(@seven_member, @six_member)
 				break if is_round_end?
@@ -219,7 +219,7 @@ module Battle
 			round_end
 		end
 		def command_exec(attack_member, defense_member)
-      command_message = "#{attack_member.name} が #{attack_member.skill_name} を発動したー"
+            command_message = "#{attack_member.name} が #{attack_member.skill_name} を発動したー"
 			Display::GameMessage.output(:white, command_message)
 			sleep(2)
 			defense_member.damage(attack_member.power)
