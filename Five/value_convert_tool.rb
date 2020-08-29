@@ -67,10 +67,6 @@ start_num.step end_num do |now_num|
     talk_scene.message_show(buu.display_name, "めっちゃ、助かった！？")          
 end
 
-
-cake_result = buu.magic(select_num_value, cake_base_value)
-
-
 talk_scene.message_show(buu.display_name, "全部終わったわー")
 talk_scene.message_show(dog.display_name, "それじゃあ、散歩連れてって(*'ω'*)")
 talk_scene.message_show(buu.display_name, "おう、連れて行ってやるぞー！？")
