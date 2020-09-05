@@ -31,6 +31,26 @@ module GameStandard
           Display::GameMessage.output(:white, "--------------------------------")
           Display::GameMessage.wait_and_message_clear
         end
-      end    
+        def scenario_end_message
+          message_show("サリー開発センター", "終わり")
+        end
+        def message_select_type(display_messages)
+          Display::GameMessage.output(:white, "-                              -")
+          Display::GameMessage.output(:white, "--------------------------------")
+          Display::GameMessage.output(:white, "- 1. #{display_messages[0]}    -")
+          Display::GameMessage.output(:white, "- 2. #{display_messages[1]}    -")
+          Display::GameMessage.output(:white, "- 3. #{display_messages[2]}    -")
+          Display::GameMessage.output(:white, "--------------------------------")
+          Display::GameMessage.output(:white, "-                              -")
+          Display::GameMessage.output(:white, "-                              -")
+          Display::GameMessage.output(:white, "-                              -")
+          Display::GameMessage.wait_and_message_clear
+        end
+        def get_select_message(select_messages, sleep_time = 1)
+          select_num = gets.chomp
+          sleep(sleep_time)
+          select_messages[select_num.to_i-1].dup
+        end
+      end
 end
   

@@ -14,16 +14,26 @@ class Buu
         base_cake
     end    
 end
-  
-class Hercule
+
+class TalkDefault
+  @display_name
+  def initialize(display_name)
+    @display_name = display_name
+  end
+  def display_name
     @display_name
-    def initialize(display_name)
-      @display_name = display_name
-    end
-    def display_name
-      @display_name
-    end    
+  end    
 end
+
+class Hercule < TalkDefault
+end
+
+class Yati < TalkDefault
+end
+
+class Kuriri < TalkDefault
+end
+
 
 class BuuDog
     BINARY_VALUE = 2
