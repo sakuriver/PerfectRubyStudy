@@ -34,6 +34,8 @@ end
 class Kuriri < TalkDefault
 end
 
+class President < TalkDefault
+end
 
 class BuuDog
     BINARY_VALUE = 2

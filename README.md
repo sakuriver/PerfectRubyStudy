@@ -4,6 +4,9 @@
 
 PerfectRubyを読みながら、カスタマイズしたプログラムを作っていくリポジトリ
 
+また、本プログラムで作ったオリジナルのUtility等はMITライセンスとして提供します
+
+
 
 # 各作品をイメージしたプログラム
 第１章～第３章　ガンダム
@@ -33,6 +36,8 @@ Chapter 3: Third
 Chapters 4 ~ DragonBall.
 
 Chapter 4: For
+
+Chapter 5: Five
 
 # 各作品の補足説明
 
