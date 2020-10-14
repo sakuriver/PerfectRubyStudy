@@ -19,6 +19,11 @@ talk_scene.message_show(firstPresident.display_name, "これから出す問題�
 talk_scene.message_show(firstPresident.display_name, "そして一般人じゃない、要人は大統領の私以外全て地球に移動してもらった！！")
 talk_scene.message_show(firstPresident.display_name, "それじゃあ、張り切って行こう！！")
 
+first_answer_list = ["1.", "2.", "3.", "4."]
+first_message_list = ["問題", "は何でしょうか"]
+first_quiz_type = GameRule::QuizGameRow::SELECT_TYPE
+first_quiz_row = GameRule::QuizGameRow.new(first_answer_list, first_message_list, first_quiz_type)
+quiz_scene = GameRule::QuizGameBase.new([first_quiz_row])
 
 
 select_num = gets.chomp
