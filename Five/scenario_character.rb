@@ -62,3 +62,13 @@ class BuuDog
         r.to_f
     end
 end
+
+
+class QuizProducer < TalkDefault
+end
+
+
+class Challenger < TalkDefault
+end
+
+
