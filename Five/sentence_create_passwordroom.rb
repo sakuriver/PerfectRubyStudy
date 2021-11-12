@@ -76,7 +76,6 @@ loop do
     cook_type_message = ""
     select_num_value = select_num.to_i
     if select_num_value == 3
-    end
     elsif select_num_value == 1
       cook_type_message = "よーし、魔法を使っちゃうぞー"
     else
@@ -90,7 +89,7 @@ end
 game_start_message_list = [
     GameScene::OpeningMessage.new(challenger.display_name, "いや、もう大丈夫だ。"),
     GameScene::OpeningMessage.new(producer.display_name, "お、いい顔ですね。"),
-    GameScene::OpeningMessage.new(producer.display_name, "初日でやる気が残っている顔です") 
+    GameScene::OpeningMessage.new(producer.display_name, "初日でやる気が残っている顔です"),
     GameScene::OpeningMessage.new(producer.display_name, "それじゃあ、行きますよ"),
     GameScene::OpeningMessage.new(challenger.display_name, "....あぁ"),
 ]
