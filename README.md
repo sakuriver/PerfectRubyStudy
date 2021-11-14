@@ -37,7 +37,16 @@ Chapters 4 ~ DragonBall.
 
 Chapter 4: For
 
-Chapter 5: Five
+
+第５章 一部オリジナルストーリー
+
+Chapter 5: 
+
+OriginalStory 
+   宿題消化して焼肉ごちゲーム
+   100万円脱出ゲーム
+
+
 
 # 各作品の補足説明
 
