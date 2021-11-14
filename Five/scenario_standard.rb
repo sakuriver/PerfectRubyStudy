@@ -46,6 +46,20 @@ module GameStandard
           Display::GameMessage.output(:white, "-                              -")
           Display::GameMessage.wait_and_message_clear
         end
+        def message_select_type_five(display_messages)
+          Display::GameMessage.output(:white, "-                              -")
+          Display::GameMessage.output(:white, "--------------------------------")
+          Display::GameMessage.output(:white, "- 1. #{display_messages[0]}    -")
+          Display::GameMessage.output(:white, "- 2. #{display_messages[1]}    -")
+          Display::GameMessage.output(:white, "- 3. #{display_messages[2]}    -")
+          Display::GameMessage.output(:white, "- 4. #{display_messages[3]}    -")
+          Display::GameMessage.output(:white, "- 5. #{display_messages[4]}    -")
+          Display::GameMessage.output(:white, "--------------------------------")
+          Display::GameMessage.output(:white, "-                              -")
+          Display::GameMessage.output(:white, "-                              -")
+          Display::GameMessage.output(:white, "-                              -")
+          Display::GameMessage.wait_and_message_clear
+        end        
         def get_select_message(select_messages, sleep_time = 1)
           select_num = gets.chomp
           sleep(sleep_time)
