@@ -46,6 +46,10 @@ ProgramDocumantation Document
  
 パーフェクトＲｕｂｙ 改訂２版 （ＰＥＲＦＥＣＴ ＳＥＲＩＥＳ）
 
+## 実行方法
+
+ruby ファイル名 で実行して確認を想定
+
 ## リンク
 
 ### amazon

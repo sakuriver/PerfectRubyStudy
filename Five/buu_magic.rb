@@ -4,15 +4,16 @@ require '../Utility/game_message'
 require './scenario_character'
 require './scenario_standard'
 
+#ゲームタイトルのコンストラクタ設定
 title_scene = GameStandard::Title.new("ブウとサタンのほのぼの日記", "(*'ω'*)始まるよー")
-
 title_scene.start
-
 talk_scene = GameStandard::Talk.new
 
+# キャラクタークラスを各種設定
 hercule = Hercule.new("サタン")
 buu = Buu.new("ブウ")
 
+# 会話シーンにおける、各会話登録をする
 talk_scene.message_show(buu.display_name, "#{hercule.display_name}、ただいまー")
 talk_scene.message_show(hercule.display_name, "#{buu.display_name}さん、おかえりなさい")
 talk_scene.message_show(buu.display_name, "#{hercule.display_name}、今日も材料を調達してきたー")
@@ -26,6 +27,7 @@ select_num = gets.chomp
 sleep(1)
 cake_base_value = 10.5
 cook_type_message = ""
+# キーボード入力によるセリフ設定
 select_num_value = select_num.to_i
 if select_num_value == 1
   cook_type_message = "よーし、魔法を使っちゃうぞー"
