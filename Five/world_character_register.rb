@@ -64,6 +64,10 @@ if Dir.exist?(select_world_number)
     talk_scene.message_show(wtm.display_name, "これで入国に必要な残り手続きは完了")
     talk_scene.message_show(wtm.display_name, "それでは、入国をするといい")
     talk_scene.message_show("サリー開発センター", "終わり")
+else
+    # ディレクトリの作成が必要なので追加する
+    Dir.mkdir select_world_number, 0755
+    talk_scene.message_show(wtm.display_name, "新しい番号を登録しておいたぞ")
 end
 
 # 世界中で登録されている管理番号ごとの専用構造を用意
