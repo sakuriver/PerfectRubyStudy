@@ -12,7 +12,7 @@ end
 module Scene
 	class Title
 		def start
-			Display::GameMessage.output(:white, "ドラゴンボール超　第7宇宙 VS 第6宇宙")
+			Display::GameMessage.output(:white, "Web気楽言語最強決定戦　Ruby VS Php ")
 			Display::GameMessage.output(:white, "")
 			Display::GameMessage.output(:white, "")
 			Display::GameMessage.output(:white, "")
@@ -40,7 +40,7 @@ module Scene
 			sleep(2)
 			Display::GameMessage.output(:white, "彼が、案件終了時にやっているのが")
 			sleep(2)
-			Display::GameMessage.output(:white, "記念旅行としての勝手に同人開発")
+			Display::GameMessage.output(:white, "記念旅行としてのオリジナル開発")
 			sleep(2)
 			Display::GameMessage.output(:white, "")
 			sleep(2)
@@ -59,9 +59,9 @@ module Scene
 		def start
 			Display::GameMessage.output(:white, "ドラゴンボール超　第7宇宙 のパーティを選択してください")
 			Display::GameMessage.output(:white, "パーティの番号を入力してくれ")
-			Display::GameMessage.output(:white, "0: モナカ×４")
-			Display::GameMessage.output(:white, "1: ベジータ、ピッコロ、孫悟飯")
-			Display::GameMessage.output(:white, "2: 孫悟空、ピッコロ、ベジータ、モナカ")
+			Display::GameMessage.output(:white, "0: 配列×４")
+			Display::GameMessage.output(:white, "1: 叔父さんインスタンス、人外インスタンス、甥っ子インスタンス")
+			Display::GameMessage.output(:white, "2: 父親インスタンス、人外インスタンス、叔父さんインスタンス、配列")
 			Display::GameMessage.output(:white, "結果は自動再生となる")
 			Display::GameMessage.output(:white, "press any key")
 
@@ -80,25 +80,25 @@ module Scene
 			@party_num = party_num
 		end
 		def start
-			si_first_m = Battle::JoinMember.new("ボタモ", 130, 15, "攻撃")
-			si_second_m = Battle::JoinMember.new("フロスト", 200, 35, "毒針")
-			si_third_m = Battle::JoinMember.new("キャベ", 150, 18, "スーパーサイヤ人")
-			si_for_m = Battle::JoinMember.new("オッタ・マゲッタ", 220, 23, "溶岩のつば")
-			si_five_m = Battle::JoinMember.new("ヒット", 300, 55, "時とばし")
+			si_first_m = Battle::JoinMember.new("abs", 130, 15, "攻撃")
+			si_second_m = Battle::JoinMember.new("array_merge", 200, 35, "sort")
+			si_third_m = Battle::JoinMember.new("constant", 150, 18, "singleton")
+			si_for_m = Battle::JoinMember.new("copy", 220, 23, "deepcopy")
+			si_five_m = Battle::JoinMember.new("DateTime", 300, 55, "TimeJump")
 			
 			if @party_num == 0
-				sv_for_m = Battle::JoinMember.new("モナカ", 30, 10, "仁王立ち")	
+				sv_for_m = Battle::JoinMember.new("[].length", 30, 10, "each")	
 				seven_space_members = Battle::BattleParty.new([sv_for_m, sv_for_m, sv_for_m, sv_for_m])
 			elsif @party_num == 1
-				sv_first_m = Battle::JoinMember.new("孫悟飯", 280, 50, "潜在能力")
-				sv_second_m = Battle::JoinMember.new("ピッコロ", 170, 28,  "まかんこうさっぽう")
-				sv_third_m = Battle::JoinMember.new("ベジータ", 150, 38, "ビッグバン")
+				sv_first_m = Battle::JoinMember.new("Class.new", 280, 50, "initialize")
+				sv_second_m = Battle::JoinMember.new("map", 170, 28,  "return value")
+				sv_third_m = Battle::JoinMember.new("module", 150, 38, "Space")
 				seven_space_members = Battle::BattleParty.new([sv_first_m, sv_second_m, sv_third_m])
 			else
-				sv_first_m = Battle::JoinMember.new("孫悟空", 280, 45, "カメハメ波")
-				sv_second_m = Battle::JoinMember.new("ピッコロ", 170, 28,  "まかんこうさっぽう")
-				sv_third_m = Battle::JoinMember.new("ベジータ", 280, 42, "ビッグバン")
-				sv_for_m = Battle::JoinMember.new("モナカ", 30, 10, "仁王立ち")	
+				sv_first_m = Battle::JoinMember.new("require", 280, 45, "path")
+				sv_second_m = Battle::JoinMember.new("map", 170, 28,  "return value")
+				sv_third_m = Battle::JoinMember.new("module", 280, 42, "Space")
+				sv_for_m = Battle::JoinMember.new("[].length", 30, 10, "each")	
 				seven_space_members = Battle::BattleParty.new([sv_first_m, sv_second_m, sv_third_m, sv_for_m])
 			end
 			
