@@ -12,3 +12,5 @@ log_sampler = AppLogging::ApplicationLogger.new
 # 送受信後のデータをログファイルに保存
 log_sampler.info(dump_data_load)
 log_sampler.info(dump_app_data)
+
+log_sampler.close
