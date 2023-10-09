@@ -19,5 +19,12 @@ module AppLogging
         def error(message)
             @logger.error message
         end
+        def fatal(message)
+            @logger.fatal message
+        end
+        # ロガーで保持しているプロセスの解除処理追加
+        def close
+            @logger.close
+        end   
     end
 end
