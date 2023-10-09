@@ -63,7 +63,7 @@ select_world_number = gets
 if Dir.exist?(select_world_number)
     talk_scene.message_show(wtm.display_name, "これで入国に必要な残り手続きは完了")
     talk_scene.message_show(wtm.display_name, "それでは、入国をするといい")
-    talk_scene.message_show("サリー開発センター", "終わり")
+    talk_scene.scenario_end_message
 else
     # ディレクトリの作成が必要なので追加する
     Dir.mkdir select_world_number, 0755
@@ -74,5 +74,5 @@ end
 # Todo mkdir の Invalid argmentの調査をする
 talk_scene.message_show(wtm.display_name, "登録番号は別途で可能 登録完了 次へ進め")
 
-talk_scene.message_show("サリー開発センター", "終わり")
+talk_scene.scenario_end_message
 

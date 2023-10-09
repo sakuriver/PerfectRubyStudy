@@ -132,20 +132,20 @@ module Battle
 		@life
 		@power
 		@skill_name
-    def initialize(name, life, power, skill_name)
-      @name = name
-      @life = life
-      @power = power
-      @skill_name = skill_name
-    end
+        def initialize(name, life, power, skill_name)
+            @name = name
+            @life = life
+            @power = power
+            @skill_name = skill_name
+        end
 		def name
-			@name
+		    @name
 		end
 		def life
-			@life
+		    @life
 		end
 		def damage(damage)
-			@life = @life - damage
+		    @life = @life - damage
 		end
 		def power
 			@power
@@ -160,7 +160,7 @@ module Battle
 	class BattleParty
 		@members
 		def initialize(members)
-      @members = members
+            @members = members
 		end
 		def get_member(num)
 			@members[num]

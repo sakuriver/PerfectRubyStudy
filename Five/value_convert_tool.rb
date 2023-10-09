@@ -32,6 +32,11 @@ start_num.step end_num do |now_num|
     sleep(1)
     select_num_value = select_num.to_i
     result_value = 0
+
+    if select_num_value == 7
+        break
+    end
+
     if select_num_value == 1
         talk_scene.message_show(dog.display_name, "2進数にしたい数を教えてね(*'ω'*)")
         input_num = gets.chomp
@@ -70,6 +75,5 @@ end
 talk_scene.message_show(buu.display_name, "全部終わったわー")
 talk_scene.message_show(dog.display_name, "それじゃあ、散歩連れてって(*'ω'*)")
 talk_scene.message_show(buu.display_name, "おう、連れて行ってやるぞー！？")
-
-talk_scene.message_show("サリー開発センター", "終わり")
+talk_scene.scenario_end_message
 
