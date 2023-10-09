@@ -28,7 +28,7 @@ class EarthSaiyns < SaiyansBase
 		awake
 	end
 	def start_say
-    Display::GameMessage.output(:white, "オラの名は#{@name}")	
+        Display::GameMessage.output(:white, "オラの名は#{@name}")	
 	end
 	def failed_say
 	end 
