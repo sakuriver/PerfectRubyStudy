@@ -19,8 +19,9 @@ end
 
 class GandamNT < GundamSeries
   # ユニコーン時代の稼働実験
+  PERFORMANCE_START_MESSAGE = 'performance test start'
   def ms_perfomance_test
-    puts 'performance test start'
+    puts PERFORMANCE_START_MESSAGE
   end
 end
 

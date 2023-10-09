@@ -24,45 +24,51 @@ talk_scene.message_show(buu.display_name, "あざーすー")
 start_num = 1
 end_num = 3
 
+LOOP_END_NUM = 7
+BINARY_NUMBER_COMBERT_NUM = 1
+HEX_NUMBER_COMBERT_NUM = 2
+TENTH_POW_COMBERT_NUM = 3
+COMMAND_WAIT_TIME = 1
+
 start_num.step end_num do |now_num|
     talk_scene.message_show(dog.display_name, "それじゃあ、#{now_num}問目は何にする？(*'ω'*)")
     talk_scene.message_show(dog.display_name, "1.２進数 2.16進数 3.xの10乗 4.分数 があるよ")
 
     select_num = gets.chomp
-    sleep(1)
+    sleep(COMMAND_WAIT_TIME)
     select_num_value = select_num.to_i
     result_value = 0
 
-    if select_num_value == 7
+    if select_num_value == LOOP_END_NUM
         break
     end
 
-    if select_num_value == 1
+    if select_num_value == BINARY_NUMBER_COMBERT_NUM
         talk_scene.message_show(dog.display_name, "2進数にしたい数を教えてね(*'ω'*)")
         input_num = gets.chomp
-        sleep(1)
+        sleep(COMMAND_WAIT_TIME)
         input_value = input_num.to_i
         result_value = dog.convert_value_binary(input_value)
-    elsif select_num_value == 2
+    elsif select_num_value == HEX_NUMBER_COMBERT_NUM
         talk_scene.message_show(dog.display_name, "16進数にしたい数を教えてね(*'ω'*)")
         input_num = gets.chomp
         sleep(1)
         input_value = input_num.to_i
         result_value = dog.convert_value_sixteen(input_value)
-    elsif select_num_value == 3
+    elsif select_num_value == TENTH_POW_COMBERT_NUM
         talk_scene.message_show(dog.display_name, "nがいくつかを教えてね(*'ω'*)")
         input_num = gets.chomp
-        sleep(1)
+        sleep(COMMAND_WAIT_TIME)
         input_value = input_num.to_i
         result_value = dog.convert_value_dobulecalc(input_value, 10)
     else
         talk_scene.message_show(dog.display_name, "分母がいくつかを教えてね(*'ω'*)")
         input_num = gets.chomp
-        sleep(1)
+        sleep(COMMAND_WAIT_TIME)
         input_value_first = input_num.to_i
         talk_scene.message_show(dog.display_name, "分子がいくつかを教えてね(*'ω'*)")
         input_num = gets.chomp
-        sleep(1)
+        sleep(COMMAND_WAIT_TIME)
         input_value_second = input_num.to_i
         result_value = dog.convert_value_rational(input_value_second, input_value_first)
     end

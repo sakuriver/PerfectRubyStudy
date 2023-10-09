@@ -29,7 +29,6 @@ Display::GameMessage.wait_and_message_clear
 
 talk_scene.message_show(manager.job, "よーし確認したぞ")
 
-# issue メッセージの組み合わせによる、コンボ実装と
 
 talk_scene.scenario_end_message
 

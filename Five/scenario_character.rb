@@ -8,7 +8,7 @@ class Buu
       @display_name
     end
     def magic(skill_id, base_cake)
-        if skill_id == 1
+        if skill_id == OKASHI_ID
           return base_cake.ceil
         end
         base_cake

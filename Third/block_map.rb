@@ -2,8 +2,9 @@
 BATTLE_RESULT_WIN = 0
 BATTLE_RESULT_DRAW = 1
 BATTLE_RESULT_LOSE = 2
+WAIT_TIME = 2
 
-battle_result_list = [2, 0, 1].map do |result_code|
+battle_result_list = [BATTLE_RESULT_LOSE, BATTLE_RESULT_WIN, BATTLE_RESULT_DRAW].map do |result_code|
   case result_code
     when BATTLE_RESULT_WIN 
       '手堅い選択でしたね、あなたの勝ちです'
@@ -15,7 +16,7 @@ battle_result_list = [2, 0, 1].map do |result_code|
 end
 
 puts "戦闘結果を確認中"
-sleep(2)
+sleep(WAIT_TIME)
 
 puts "結果発表"
 battle_result_list.each do |result_message|
@@ -23,5 +24,5 @@ battle_result_list.each do |result_message|
   puts result_message
   puts "次の結果表示をいたします"
 end
-sleep(2)
+sleep(WAIT_TIME)
 puts "今回のマップ戦については、これで完了となります"

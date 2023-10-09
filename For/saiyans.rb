@@ -12,7 +12,7 @@ class SaiyansBase
 		@defense = defense
 	end
 	def awake
-    Display::GameMessage.output(:white, "覚醒サイヤ人になりました")		
+        Display::GameMessage.output(:white, "覚醒サイヤ人になりました")		
 	end
 	def attack
 	end
@@ -23,8 +23,8 @@ end
 
 class EarthSaiyns < SaiyansBase
 	def skill
-    Display::GameMessage.output(:white, "本気を見せてやる")	
-    Display::GameMessage.output(:white, "うおおおお")	
+        Display::GameMessage.output(:white, "本気を見せてやる")	
+        Display::GameMessage.output(:white, "うおおおお")	
 		awake
 	end
 	def start_say
@@ -37,12 +37,12 @@ end
 
 class KingSaiyns < SaiyansBase
 	def start_say
-    Display::GameMessage.output(:white, "かかってくるがいい")	
+        Display::GameMessage.output(:white, "かかってくるがいい")	
 	end
 	def advice
-    Display::GameMessage.output(:white, "ちっ、これだから地球人は")	
-    sleep(2)
-    Display::GameMessage.output(:white, "skillメソッドを使うんだ")	
+        Display::GameMessage.output(:white, "ちっ、これだから地球人は")	
+        sleep(2)
+        Display::GameMessage.output(:white, "skillメソッドを使うんだ")	
 	end
 end
 

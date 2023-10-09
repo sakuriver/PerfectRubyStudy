@@ -2,12 +2,18 @@ require '../Utility/game_message'
 
 
 module Space
-	class Six
-		DISPLAY_NAME = "第6宇宙"
+  class Six
+      DISPLAY_NAME = "第6宇宙"
+  end
+  class SixEng
+      DISPLAY_NAME = "Universe 6"
   end
   class Seven
-		DISPLAY_NAME = "第7宇宙"
-	end
+      DISPLAY_NAME = "第7宇宙"
+  end
+  class SevenEng
+	DISPLAY_NAME = "Universe 7"
+  end  
 end
 module Scene
 	class Title
@@ -230,8 +236,8 @@ module Battle
 			Display::GameMessage.output(:red, life_push_message)
 		end
 		def battle_start
-			@seven_space_name = Space::Seven::DISPLAY_NAME
-			@six_space_name = Space::Six::DISPLAY_NAME
+			@seven_space_name = Space::SevenEng::DISPLAY_NAME
+			@six_space_name = Space::SixEng::DISPLAY_NAME
 			battle_start_message = "これから #{@six_space_name} VS #{@seven_space_name} を開始いたします "
 			Display::GameMessage.output(:white, battle_start_message)
 			sleep(2)
