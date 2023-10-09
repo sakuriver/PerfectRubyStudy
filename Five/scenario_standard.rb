@@ -1,3 +1,6 @@
+
+require '../Utility/scene_logger'
+
 module GameStandard
     class Title
         @game_header_title
@@ -18,6 +21,7 @@ module GameStandard
       end
     end  
     class Talk
+        @end_message_data
         def message_show(display_name, display_message)
           Display::GameMessage.output(:white, "-                              -")
           Display::GameMessage.output(:white, "-                              -")
@@ -32,7 +36,8 @@ module GameStandard
           Display::GameMessage.wait_and_message_clear
         end
         def scenario_end_message
-          message_show("サリー開発センター", "終わり")
+          @end_message_data = SceneStandard::MessageEndData.new("サリー開発センター", "終わり")
+          message_show(@end_message_data.company_name, @end_message_data.complete_message)
         end
         def message_select_type(display_messages)
           Display::GameMessage.output(:white, "-                              -")

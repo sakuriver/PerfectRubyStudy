@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require '../Utility/game_message'
+require '../Utility/scene_logger'
 require './scenario_character'
 require './scenario_standard'
 
@@ -8,6 +9,7 @@ require './scenario_standard'
 title_scene = GameStandard::Title.new("ブウとサタンのほのぼの日記", "(*'ω'*)始まるよー")
 title_scene.start
 talk_scene = GameStandard::Talk.new
+end_message_data = SceneStandard::MessageEndData.new("サリー開発センター", "終わり")
 
 # キャラクタークラスを各種設定
 hercule = Hercule.new("サタン")
@@ -61,5 +63,6 @@ end
 talk_scene.message_show(hercule.display_name, "ごちそうさまでしたー")
 talk_scene.message_show(buu.display_name, "ごちそうさまでしたー")
 
-talk_scene.message_show("サリー開発センター", "終わり")
+
+talk_scene.message_show(end_message_data.company_name, end_message_data.complete_message)
 

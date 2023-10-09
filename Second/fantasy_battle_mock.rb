@@ -26,16 +26,18 @@ class JobBase
 end
 
 class Soldier < JobBase
+  SKILL_START_MESSAGE = 'バイキルトを発動しました'
   def skill
     @power *= 2
-    puts 'バイキルトを発動しました'
+    puts SKILL_START_MESSAGE
   end
 end
 
 class Wizard < JobBase
+  SKILL_START_MESSAGE = 'ヒールを発動しました'
   def skill
     @now_hp += 10
-    puts 'ヒールを発動しました'
+    puts SKILL_START_MESSAGE
   end
 end
 
